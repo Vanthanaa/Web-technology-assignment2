@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- makes the page scale properly on phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Registration</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top-bar">Student Admission Portal</header>
+ 
+  <main class="card">
+    <h1>Student Registration</h1>
+    <!-- novalidate: we show our own messages; multipart: needed for file upload -->
+    <form id="regForm" action="../PHP/add_student.php" method="post"
+          enctype="multipart/form-data" novalidate>
+ 
+      <div class="field">
+        <label for="name">Full Name *</label>
+        <input type="text" id="name" name="name" placeholder="e.g. Jayavanthanaa T">
+        <small class="error" id="err-name"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="roll">Roll Number *</label>
+        <input type="text" id="roll" name="roll_number" placeholder="e.g. 24CS082">
+        <small class="error" id="err-roll"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" placeholder="you@example.com">
+        <small class="error" id="err-email"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="password">Password *</label>
+        <input type="password" id="password" name="password">
+        <!-- live strength indicator filled by script.js -->
+        <div class="meter"><span id="meterBar"></span></div>
+        <small id="meterText" class="hint">Minimum 8 characters with upper, lower, digit and symbol</small>
+        <small class="error" id="err-password"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="course">Course *</label>
+        <select id="course" name="course">
+          <option value="">-- Select course --</option>
+          <option>B.E. Computer Science and Engineering</option>
+          <option>B.E. Electronics and Communication</option>
+          <option>B.E. Mechanical Engineering</option>
+          <option>B.Tech Information Technology</option>
+        </select>
+        <small class="error" id="err-course"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="photo">Profile Photo (JPG/PNG, max 2 MB)</label>
+        <input type="file" id="photo" name="photo" accept=".jpg,.jpeg,.png">
+        <small class="error" id="err-photo"></small>
+      </div>
+ 
+      <div class="field">
+        <label for="document">ID Proof / Certificate (PDF/JPG/PNG, max 2 MB)</label>
+        <input type="file" id="document" name="document" accept=".pdf,.jpg,.jpeg,.png">
+        <small class="error" id="err-document"></small>
+      </div>
+ 
+      <div class="actions">
+        <button type="submit" class="btn primary">Register</button>
+        <button type="reset" class="btn">Reset</button>
+      </div>
+    </form>
+  </main>
+ 
+  <script src="script.js"></script>
+</body>
+</html>

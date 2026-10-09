@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee" version="4.0">
+  <display-name>StudentPortal</display-name>
+ 
+  <!-- Folder in which the PHP module stores the uploaded files -->
+  <context-param>
+    <param-name>uploadDir</param-name>
+    <param-value>C:/xampp/htdocs/StudentAdmissionPortal/PHP/uploads</param-value>
+  </context-param>
+ 
+  <session-config>
+    <session-timeout>15</session-timeout>
+  </session-config>
+ 
+  <welcome-file-list>
+    <welcome-file>login.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
